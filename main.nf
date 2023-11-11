@@ -1,15 +1,21 @@
 
 process HELLOWORLD {
     debug true
+   
+    input:
+    val x
 
+   
     script:
     """
-    echo "Hello World"
+    echo ${launchDir}
+    echo ${projectDir}
+    echo ${x} > out.txt
     """
 }
 
 workflow {
-  HELLOWORLD()
+  HELLOWORLD(params.data_for)
 }
 
 
