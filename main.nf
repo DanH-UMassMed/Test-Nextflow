@@ -10,7 +10,7 @@ process HELLOWORLD {
       val x
 
     output:
-      path out.txt
+      path "out.txt"
 
    
     script:
