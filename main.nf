@@ -3,7 +3,7 @@ process HELLOWORLD {
     debug true
    publishDir = [
         path: "${params.results_dir}/out" ,
-        mode: copy,
+        mode: 'copy',
     ]
 
     input:
